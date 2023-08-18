@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* THEME SWITCHER BUTTON */
+.theme-ball.dark {
+  @apply bg-light w-6 h-6 rounded-full;
+}
+.theme-ball.light {
+  @apply bg-dark w-6 h-6 rounded-full;
+}
+/* HEADER*/
+.header {
+}
+
+.header > * {
+  @apply bg-transparent rounded-full p-2;
+}
+
+.header.dark {
+  @apply flex gap-4 mt-auto border border-dashed  border-light w-fit p-2 rounded-3xl;
+}
+.header.light {
+  @apply flex gap-4 mt-auto border border-dashed border-dark w-fit p-2 rounded-3xl;
+}
+
+.header > .active.dark {
+  @apply bg-light text-dark duration-1000;
+}
+.header > .active.light {
+  @apply bg-dark text-light duration-1000;
+}
+
+/* Home page grid*/
+
+.page-grid {
+  @apply place-content-center grid gap-5 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] auto-cols-[300px] auto-rows-[300px] mt-6;
+}
+
+.page-grid > div.light {
+  @apply border border-dashed border-secondaryDark rounded-3xl bg-red-400;
+}
+.page-grid > div.dark {
+  @apply border border-dashed  border-secondaryLight rounded-3xl;
+}
+
+.card-two-by-two {
+  @apply lg:row-[span_2_/_auto] lg:col-[span_2_/_auto];
+}
+.card-one-by-one {
+  @apply lg:row-[span_1_/_auto] lg:col-[span_1_/_auto];
+}
+
+.card-vertical {
+  @apply lg:row-[span_2_/_auto];
+}
+
+.card-horizontal {
+  @apply lg:col-[span_2_/_auto];
+}
+
+.card-full-horizontal {
+  @apply lg:col-[span_4_/_auto];
+}
